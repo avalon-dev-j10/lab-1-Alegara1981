@@ -1,4 +1,6 @@
 package ru.avalon.java.dev.j10.labs.models;
+import ru.avalon.java.dev.j10.labs.commons.Address;
+
 
 /**
  * Представление о человеке.
@@ -12,7 +14,27 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 public class Person {
+    private String name;
+    private Passport passport;
+    private Address address;
 
+    public Person(String name, Passport passport, Address address) {
+        this.name = name;
+        this.passport = passport;
+        this.address = address;
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public Address getRealAddress() {
+        return address;
+    }
+
+    public String getName() {
+        return name;
+    }
     /*
      * TODO(Студент): Создайте класс Address.
      *
@@ -47,6 +69,18 @@ public class Person {
      * @return имя человека в виде строки.
      */
     public String getFullName() {
+        if (passport.getName() != null && passport.getSurname() != null && passport.getFathername() != null) {
+            return passport.getName() + " " + passport.getSurname() + " " + passport.getFathername();
+        }
+        if (passport.getFathername() == null && passport.getSecondName() != null) {
+            return passport.getName() + " " + passport.getSecondName().substring(0, 1) + "." + " " +
+                    passport.getSurname();
+        }
+        if (passport.getFathername() == null && passport.getSecondName() == null && passport.getName() != null &&
+                passport.getSurname() != null) {
+            return passport.getName() + " " +  passport.getSurname();
+        }
+
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
@@ -61,10 +95,13 @@ public class Person {
      *
      * @return адрес регистрации в виде строки.
      */
-    public String getAddress() {
+    public String getAddress(){
+
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
+        return passport.getAddress().getIndex() + " " + passport.getAddress().getCountry()
+                + " " + passport.getAddress().getCity() + " " + passport.getAddress().getStreet() + " "
+                + passport.getAddress().getHome() + " " + passport.getAddress().getFlat();
     }
 }

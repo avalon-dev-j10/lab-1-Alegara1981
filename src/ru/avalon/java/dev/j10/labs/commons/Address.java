@@ -18,24 +18,28 @@
 
 package ru.avalon.java.dev.j10.labs.commons;
 
-public class Address{
-    private int index;
+public class Address{           // Объявлен класс.
+    private int index;          // Объявление полей(переменных) класса.
     private String country;
+    private String region;
     private String city;
     private String street;
     private String home;
     private int flat;
 
-    public Address(int index, String country, String city, String street, String home, int flat) {
+    public Address(int index, String country, String region, String city,
+            String street, String home, int flat) // Обьявлен метод для инициализации переменных 
+    {
         this.index = index;
-        this.country = country;
+        this.country = country;// Инициализация переменных.
+        this.region = region;
         this.city = city;
         this.street = street;
         this.home = home;
         this.flat = flat;
     }
 
-    public int getIndex() {
+    public int getIndex() { // Обьявление методов получения значений полей из класса.
         return index;
     }
 
@@ -46,6 +50,11 @@ public class Address{
     public String getCountry() {
         return country;
     }
+
+    public String getRegion() {
+        return region;
+    }
+    
 
     public String getCity() {
         return city;

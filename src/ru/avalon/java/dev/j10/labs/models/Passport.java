@@ -19,8 +19,8 @@ import java.time.LocalDate;
  * <li> орган, выдавший документ.
  * </ol>
  */
-public class Passport {
-    private int passportNumber;
+public class Passport {          // Объявлен класс.
+    private int passportNumber;    // Объявление полей(переменных) класса.
     private int passportSeria;
     private String name;
     private String surname;
@@ -28,12 +28,12 @@ public class Passport {
     private String secondName;
     private LocalDate birthday;
     private LocalDate dateOfIssuing;
-    private Address address;
+   
 
-    public Passport(int passportNumber, int passportSeria, String name, String surname,
-                    String fathername, String secondName, LocalDate birthday, LocalDate dateOfIssuing,
-                    Address address) {
-        this.passportNumber = passportNumber;
+    public Passport(int passportNumber, int passportSeria, String name,
+            String surname,String fathername, String secondName,
+            LocalDate birthday, LocalDate dateOfIssuing) {  // Обьявлен метод для инициализации переменных 
+        this.passportNumber = passportNumber; // Инициализация переменных.
         this.passportSeria = passportSeria;
         this.name = name;
         this.surname = surname;
@@ -41,7 +41,7 @@ public class Passport {
         this.secondName = secondName;
         this.birthday = birthday;
         this.dateOfIssuing = dateOfIssuing;
-        this.address = address;
+       
     }
 
     /*
@@ -65,7 +65,7 @@ public class Passport {
      *    пределами пакета.
      */
 
-    public int getPassportNumber() {
+    public int getPassportNumber() {   // Обьявление методов получения значений полей из класса.
         return passportNumber;
     }
 
@@ -97,7 +97,5 @@ public class Passport {
         return dateOfIssuing;
     }
 
-    public Address getAddress() {
-        return address;
-    }
+   
 }

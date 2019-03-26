@@ -2,39 +2,22 @@ package ru.avalon.java.dev.j10.labs.models;
 import ru.avalon.java.dev.j10.labs.commons.Address;
 
 
-/**
- * Представление о человеке.
- * <p>
- * С точки зрения задания человек представляется как сущность,
- * наделённая:
- * <ol>
- *     <li>именем;
- *     <li>паспортными данными;
- *     <li>пропиской по месту жительства.
- * </ol>
- */
-public class Person {
-    private String name;
-    private Passport passport;
+public class Person {            // Объявлен класс.
+    private Passport passport; // Объявление полей(переменных) класса с типом класса Паспорт и Адрес
     private Address address;
 
-    public Person(String name, Passport passport, Address address) {
-        this.name = name;
-        this.passport = passport;
+    public Person(Passport passport, Address address) {
+        this.passport = passport; // Инициализация переменных
         this.address = address;
     }
 
-    public Passport getPassport() {
+    public Passport getPassport() {  // Метод получения из класса значения полей.
         return passport;
     }
 
-    public Address getRealAddress() {
-        return address;
-    }
-
-    public String getName() {
+    /*public String getName() {
         return name;
-    }
+    }*/
     /*
      * TODO(Студент): Создайте класс Address.
      *
@@ -68,7 +51,7 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
-    public String getFullName() {
+    public String getFullName() { // Метод получения полей использующий в своей реализации оператор условия.
         if (passport.getName() != null && passport.getSurname() != null && passport.getFathername() != null) {
             return passport.getName() + " " + passport.getSurname() + " " + passport.getFathername();
         }
@@ -95,13 +78,13 @@ public class Person {
      *
      * @return адрес регистрации в виде строки.
      */
-    public String getAddress(){
+    public String getAddress(){ //Метод получения из класса значения полей.
 
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return passport.getAddress().getIndex() + " " + passport.getAddress().getCountry()
-                + " " + passport.getAddress().getCity() + " " + passport.getAddress().getStreet() + " "
-                + passport.getAddress().getHome() + " " + passport.getAddress().getFlat();
+        return address.getIndex() + " " + address.getCountry()
+                + " " + address.getCity() + " " + address.getStreet() + " "
+                + address.getHome() + " " + address.getFlat();
     }
 }

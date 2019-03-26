@@ -18,6 +18,11 @@ public class Person {
     private Passport passport;
     private Address address;
 
+     /*  TODO (Проверка №1)
+         Добавить коментарии к полям и методам класса
+         Поле String name здесь не надо, его надо получать с класса Passport
+    */
+    
     public Person(String name, Passport passport, Address address) {
         this.name = name;
         this.passport = passport;

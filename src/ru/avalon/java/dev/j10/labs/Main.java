@@ -19,7 +19,7 @@ public class Main {
 
 
         Passport ivanonPassport = new Passport(8797, 554, "Иван",
-                "Иванов", "Иванович", null,
+                "Иванов", null, null,
                 LocalDate.of(1981, 10, 23),LocalDate.of(1999, 10,10),
                 new Address(789, "Russia", "Moscow", "Lenina", "10i", 10));
         Address ivanovAddress = new Address(987, "USA", "Brooklin", "avenue", "12i",
@@ -42,6 +42,11 @@ public class Main {
         System.out.println(addressIvanov);
         String addressSmith = smith.getAddress();
         System.out.println(addressSmith);
+        
+         /*  TODO (Проверка №1)
+             При создании объекта класса Person имя надо указывать только
+            в классе Passport.
+        */
 
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'

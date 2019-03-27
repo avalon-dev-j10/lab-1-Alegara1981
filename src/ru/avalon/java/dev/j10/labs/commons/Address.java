@@ -1,19 +1,4 @@
- 
-/*
- * TODO(Студент): Создайте класс Address.
- *
- * 1. Добавте файл в пакет ru.avalon.java.dev.j10.labs.commons.
- *
- * 2. Создайте класс, видимый из пакета. Подумайте о том
- *    Какое имя должен иметь класс, если он объявленн в этом
- *    файле.
- *
- * 3. Подумайте над тем, какие переменные должены быть
- *    определены в классе.
- *
- * 4. Подумайте над тем, какие методы должны быть объявлены
- *    в классе.
- */
+
 
 
 package ru.avalon.java.dev.j10.labs.commons;
@@ -28,8 +13,9 @@ public class Address{           // Объявлен класс.
     private int flat;
 
     public Address(int index, String country, String region, String city,
-            String street, String home, int flat) // Обьявлен метод для инициализации переменных 
+            String street, String home, int flat) // Обьявлен конструктор для инициализации переменных 
     {
+       
         this.index = index;
         this.country = country;// Инициализация переменных.
         this.region = region;
@@ -37,8 +23,20 @@ public class Address{           // Объявлен класс.
         this.street = street;
         this.home = home;
         this.flat = flat;
-    }
-
+        
+       } 
+        
+      public Address(int index, String country, String city, // Конструктор исключающий поле класса region.
+            String street, String home, int flat){
+      this(index, country, null, city, street, home, flat);
+      } 
+      
+      
+      public Address(String country, String city, // Конструктор исключающий поле класса region и index.
+            String street, String home, int flat){
+      this(0, country, null, city, street, home, flat);
+      } 
+      
     public int getIndex() { // Обьявление методов получения значений полей из класса.
         return index;
     }

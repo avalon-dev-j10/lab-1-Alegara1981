@@ -12,16 +12,14 @@ public class Main {
 
         Passport ivanonPassport = new Passport(8797, 554, "Иван",
                 "Иванов", "Иванович", null,
-                LocalDate.of(1981, 10, 23),LocalDate.of(1999, 10,10)/*,
-                new Address(789, "Russia", "Moscow", "Lenina", "10i", 10)*/);
+                LocalDate.of(1981, 10, 23),LocalDate.of(1999, 10,10));
         Address ivanovAddress = new Address(987, "USA", null, "Brooklin", "avenue", "12i",
                 13);
         Person ivanov = new Person(ivanonPassport, ivanovAddress);
 
         Passport smithPassport = new Passport(6969, 456, "John",
                 "Smith", null, "Edward",
-                LocalDate.of(1980, 9, 20),LocalDate.of(1999, 8,9)/*,
-                new Address(987, "USA", "Brooklin", "avenue", "12i", 13)*/);
+                LocalDate.of(1980, 9, 20),LocalDate.of(1999, 8,9));
         Address smithAddress = new Address(789, "Russia", "Moscows region", "Moscow", "Lenina", "10i",
                 10);
         Person smith = new Person(smithPassport, smithAddress);

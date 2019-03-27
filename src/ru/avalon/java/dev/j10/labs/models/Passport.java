@@ -4,21 +4,7 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
 
 import java.time.LocalDate;
 
-/**
- * Представление о паспортных данных человека.
- * <p>
- * Паспортные данные должны включать:
- * <ol>
- * <li> серию и номер документа;
- * <li> имя;
- * <li> фамилию;
- * <li> отчество;
- * <li> второе имя;
- * <li> день рождения;
- * <li> дату выдачи;
- * <li> орган, выдавший документ.
- * </ol>
- */
+
 public class Passport {          // Объявлен класс.
     private int passportNumber;    // Объявление полей(переменных) класса.
     private int passportSeria;
@@ -32,7 +18,7 @@ public class Passport {          // Объявлен класс.
 
     public Passport(int passportNumber, int passportSeria, String name,
             String surname,String fathername, String secondName,
-            LocalDate birthday, LocalDate dateOfIssuing) {  // Обьявлен метод для инициализации переменных 
+            LocalDate birthday, LocalDate dateOfIssuing) {  // Обьявлен конструктор для инициализации переменных 
         this.passportNumber = passportNumber; // Инициализация переменных.
         this.passportSeria = passportSeria;
         this.name = name;
@@ -44,26 +30,18 @@ public class Passport {          // Объявлен класс.
        
     }
 
-    /*
-     * TODO(Студент): Закончить определение класса.
-     *
-     * 1. Объявить атрибуты класса.
-     *
-     * 2. Определить необходимые методы класса. Подумайте о
-     *    том, какие методы должны существовать в классе,
-     *    чтобы обеспечивать получение всей необходимой
-     *    информации о состоянии объектов данного класса.
-     *    Все ли поля обязательно будут проинициализированы
-     *    при создании экземпляра?
-     *
-     * 3. Создайте все необходимые конструкторы класса.
-     *
-     * 4. Помните о возможности существования перегруженных
-     *    конструкторов.
-     *
-     * 5. Обеспечте возможность использования класса за
-     *    пределами пакета.
-     */
+    public Passport(int passportNumber, int passportSeria, String name,
+            String surname,String fathername,
+            LocalDate birthday, LocalDate dateOfIssuing){
+    this(passportNumber, passportSeria, name, surname, fathername, null, birthday, dateOfIssuing);
+    
+    }
+    public Passport(int passportNumber, int passportSeria, String name,
+            String surname,
+            LocalDate birthday, LocalDate dateOfIssuing){
+    this(passportNumber, passportSeria, name, surname, null, birthday, dateOfIssuing);
+    }
+    
 
     public int getPassportNumber() {   // Обьявление методов получения значений полей из класса.
         return passportNumber;

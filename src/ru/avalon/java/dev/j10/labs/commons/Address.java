@@ -23,6 +23,10 @@ public class Address{           // Объявлен класс.
         this.street = street;
         this.home = home;
         this.flat = flat;
+        /*  TODO (Проверка№2 ЛР№1)
+            - Добавить коментарии ко всем  полям и методам класса, а то я к примеру не пойму,
+            что такое flat!????
+        */
         
        } 
         

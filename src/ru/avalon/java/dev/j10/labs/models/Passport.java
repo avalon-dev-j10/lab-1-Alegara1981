@@ -27,6 +27,9 @@ public class Passport {          // Объявлен класс.
         this.secondName = secondName;
         this.birthday = birthday;
         this.dateOfIssuing = dateOfIssuing;
+        /*  TODO (Проверка№2 ЛР№1)
+            - Добавить коментарии ко всем  полям и методам класса!
+        */
        
     }
 

@@ -3,26 +3,25 @@
 
 package ru.avalon.java.dev.j10.labs.commons;
 
-public class Address{           // Объявлен класс.
-    private int index;          // Объявление полей(переменных) класса.
-    private String country;
-    private String region;
-    private String city;
-    private String street;
-    private String home;
-    private int flat;
+public class Address{           // Объявлен класс Адрес.
+    private int index;          // Объявление полей(переменных) класса - индекс
+    private String region;       // регион-область
+    private String city;          // город
+    private String street;          // улица
+    private String home;              // дом
+    private int flat;                     // квартира
 
     public Address(int index, String country, String region, String city,
-            String street, String home, int flat) // Обьявлен конструктор для инициализации переменных 
+            String street, String home, int flat) // Обьявлен конструктор для инициализации переменных класса Адрес. 
     {
        
-        this.index = index;
-        this.country = country;// Инициализация переменных.
-        this.region = region;
-        this.city = city;
-        this.street = street;
-        this.home = home;
-        this.flat = flat;
+        this.index = index; // Индекс
+        this.country = country; // Страна
+        this.region = region;  // Регион-область
+        this.city = city;  // Город
+        this.street = street; // Улица
+        this.home = home; // Дом
+        this.flat = flat;  // Квартира
         /*  TODO (Проверка№2 ЛР№1)
             - Добавить коментарии ко всем  полям и методам класса, а то я к примеру не пойму,
             что такое flat!????

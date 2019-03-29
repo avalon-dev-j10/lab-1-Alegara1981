@@ -5,15 +5,15 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
 import java.time.LocalDate;
 
 
-public class Passport {          // Объявлен класс.
-    private int passportNumber;    // Объявление полей(переменных) класса.
-    private int passportSeria;
-    private String name;
-    private String surname;
-    private String fathername;
-    private String secondName;
-    private LocalDate birthday;
-    private LocalDate dateOfIssuing;
+public class Passport {          // Объявлен класс Паспорт.
+    private int passportNumber;    // Объявление полей(переменных) класса - номер паспорта
+    private int passportSeria;   // Серия паспорта
+    private String name;          // Имя
+    private String surname;       // Фамилия
+    private String fathername;    // Отчество
+    private String secondName;    // Второе имя
+    private LocalDate birthday;    // Дата рождения
+    private LocalDate dateOfIssuing;  // Дата выдычи
    
 
     public Passport(int passportNumber, int passportSeria, String name,
@@ -34,13 +34,13 @@ public class Passport {          // Объявлен класс.
     }
 
     public Passport(int passportNumber, int passportSeria, String name,
-            String surname,String fathername,
+            String surname,String fathername,  // Перегруженный конструктор с отсутствием второго имени.
             LocalDate birthday, LocalDate dateOfIssuing){
     this(passportNumber, passportSeria, name, surname, fathername, null, birthday, dateOfIssuing);
     
     }
     public Passport(int passportNumber, int passportSeria, String name,
-            String surname,
+            String surname,  // Перегруженный конструктор с отсутствием отчества и второго имени.
             LocalDate birthday, LocalDate dateOfIssuing){
     this(passportNumber, passportSeria, name, surname, null, birthday, dateOfIssuing);
     }

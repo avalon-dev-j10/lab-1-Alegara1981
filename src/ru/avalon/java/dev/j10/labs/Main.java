@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         Passport ivanonPassport = new Passport(8797, 554, "Иван",
-                "Иванов", "Иванович", null,
+                "Иванов", "Иванович",
                 LocalDate.of(1981, 10, 23),LocalDate.of(1999, 10,10));
         Address ivanovAddress = new Address(987, "USA", null, "Brooklin", "avenue", "12i",
                 13);

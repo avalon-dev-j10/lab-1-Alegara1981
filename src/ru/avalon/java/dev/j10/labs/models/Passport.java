@@ -18,8 +18,8 @@ public class Passport {          // Объявлен класс Паспорт.
 
     public Passport(int passportNumber, int passportSeria, String name,
             String surname,String fathername, String secondName,
-            LocalDate birthday, LocalDate dateOfIssuing) {  // Обьявлен конструктор для инициализации переменных 
-        this.passportNumber = passportNumber; // Инициализация переменных.
+            LocalDate birthday, LocalDate dateOfIssuing) {  // Обьявлен конструктор для инициализации переменных - безсмысленный комментарий
+        this.passportNumber = passportNumber; // Инициализация переменных. - безсмысленный комментарий
         this.passportSeria = passportSeria;
         this.name = name;
         this.surname = surname;
@@ -34,7 +34,7 @@ public class Passport {          // Объявлен класс Паспорт.
     }
 
     public Passport(int passportNumber, int passportSeria, String name,
-            String surname,String fathername,  // Перегруженный конструктор с отсутствием второго имени.
+            String surname,String fathername,  // Перегруженный конструктор с отсутствием второго имени. - 
             LocalDate birthday, LocalDate dateOfIssuing){
     this(passportNumber, passportSeria, name, surname, fathername, null, birthday, dateOfIssuing);
     
@@ -45,6 +45,13 @@ public class Passport {          // Объявлен класс Паспорт.
     this(passportNumber, passportSeria, name, surname, null, birthday, dateOfIssuing);
     }
     
+    /*  TODO (Проверка№3 ЛР№1)
+        - Добавить коментарии ко всем методам класса - это означает надо описать действие метода,
+        а не описывать его устройство, нас интересует что он может делать.
+        Например: нахождение максимального числа, получение поля index, конструктор со всеми параметрами!
+        Конструкторы и гетеры тоже надо подписывать, сразу становиться ясно что он делает!
+        - Ставь комментарии перед конструкторами и методами, тогда они легче читаются!
+    */
 
     public int getPassportNumber() {   // Обьявление методов получения значений полей из класса.
         return passportNumber;

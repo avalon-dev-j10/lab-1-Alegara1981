@@ -15,11 +15,11 @@ public class Passport {          // Объявлен класс Паспорт.
     private LocalDate birthday;    // Дата рождения
     private LocalDate dateOfIssuing;  // Дата выдычи
    
-
+    // Конструктор инициализации полей класса.
     public Passport(int passportNumber, int passportSeria, String name,
             String surname,String fathername, String secondName,
-            LocalDate birthday, LocalDate dateOfIssuing) {  // Обьявлен конструктор для инициализации переменных - безсмысленный комментарий
-        this.passportNumber = passportNumber; // Инициализация переменных. - безсмысленный комментарий
+            LocalDate birthday, LocalDate dateOfIssuing) {  
+        this.passportNumber = passportNumber; 
         this.passportSeria = passportSeria;
         this.name = name;
         this.surname = surname;
@@ -34,7 +34,7 @@ public class Passport {          // Объявлен класс Паспорт.
     }
 
     public Passport(int passportNumber, int passportSeria, String name,
-            String surname,String fathername,  // Перегруженный конструктор с отсутствием второго имени. - 
+            String surname,String fathername,  // Перегруженный конструктор с отсутствием второго имени.
             LocalDate birthday, LocalDate dateOfIssuing){
     this(passportNumber, passportSeria, name, surname, fathername, null, birthday, dateOfIssuing);
     
@@ -53,35 +53,35 @@ public class Passport {          // Объявлен класс Паспорт.
         - Ставь комментарии перед конструкторами и методами, тогда они легче читаются!
     */
 
-    public int getPassportNumber() {   // Обьявление методов получения значений полей из класса.
+    public int getPassportNumber() {   // Метод получения значений полей из класса - номер паспорта
         return passportNumber;
     }
 
-    public int getPassportSeria() {
+    public int getPassportSeria() { // Метод получения значений полей из класса - серия паспорта
         return passportSeria;
     }
 
-    public String getName() {
+    public String getName() { // Метод получения значений полей из класса - имя
         return name;
     }
 
-    public String getSurname() {
+    public String getSurname() {  // Метод получения значений полей из класса - фамилия
         return surname;
     }
 
-    public String getFathername() {
+    public String getFathername() {  // Метод получения значений полей из класса - отчесство
         return fathername;
     }
 
-    public String getSecondName() {
+    public String getSecondName() {  // Метод получения значений полей из класса - второе имя
         return secondName;
     }
 
-    public LocalDate getBirthday() {
+    public LocalDate getBirthday() {  // Метод получения значений полей из класса - день рождения
         return birthday;
     }
 
-    public LocalDate getDateOfIssuing() {
+    public LocalDate getDateOfIssuing() {  // Метод получения значений полей из класса - дата получения
         return dateOfIssuing;
     }
 

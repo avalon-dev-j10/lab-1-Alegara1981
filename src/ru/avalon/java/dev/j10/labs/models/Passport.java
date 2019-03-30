@@ -4,36 +4,22 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
 
 import java.time.LocalDate;
 
-/**
- * Представление о паспортных данных человека.
- * <p>
- * Паспортные данные должны включать:
- * <ol>
- * <li> серию и номер документа;
- * <li> имя;
- * <li> фамилию;
- * <li> отчество;
- * <li> второе имя;
- * <li> день рождения;
- * <li> дату выдачи;
- * <li> орган, выдавший документ.
- * </ol>
- */
-public class Passport {
-    private int passportNumber;
-    private int passportSeria;
-    private String name;
-    private String surname;
-    private String fathername;
-    private String secondName;
-    private LocalDate birthday;
-    private LocalDate dateOfIssuing;
-    private Address address;
 
-    public Passport(int passportNumber, int passportSeria, String name, String surname,
-                    String fathername, String secondName, LocalDate birthday, LocalDate dateOfIssuing,
-                    Address address) {
-        this.passportNumber = passportNumber;
+public class Passport {          // Объявлен класс Паспорт.
+    private int passportNumber;    // Объявление полей(переменных) класса - номер паспорта
+    private int passportSeria;   // Серия паспорта
+    private String name;          // Имя
+    private String surname;       // Фамилия
+    private String fathername;    // Отчество
+    private String secondName;    // Второе имя
+    private LocalDate birthday;    // Дата рождения
+    private LocalDate dateOfIssuing;  // Дата выдычи
+   
+    // Конструктор инициализации полей класса.
+    public Passport(int passportNumber, int passportSeria, String name,
+            String surname,String fathername, String secondName,
+            LocalDate birthday, LocalDate dateOfIssuing) {  
+        this.passportNumber = passportNumber; 
         this.passportSeria = passportSeria;
         this.name = name;
         this.surname = surname;
@@ -41,63 +27,63 @@ public class Passport {
         this.secondName = secondName;
         this.birthday = birthday;
         this.dateOfIssuing = dateOfIssuing;
-        this.address = address;
+        /*  TODO (Проверка№2 ЛР№1)
+            - Добавить коментарии ко всем  полям и методам класса!
+        */
+       
     }
 
-    /*
-     * TODO(Студент): Закончить определение класса.
-     *
-     * 1. Объявить атрибуты класса.
-     *
-     * 2. Определить необходимые методы класса. Подумайте о
-     *    том, какие методы должны существовать в классе,
-     *    чтобы обеспечивать получение всей необходимой
-     *    информации о состоянии объектов данного класса.
-     *    Все ли поля обязательно будут проинициализированы
-     *    при создании экземпляра?
-     *
-     * 3. Создайте все необходимые конструкторы класса.
-     *
-     * 4. Помните о возможности существования перегруженных
-     *    конструкторов.
-     *
-     * 5. Обеспечте возможность использования класса за
-     *    пределами пакета.
-     */
+    public Passport(int passportNumber, int passportSeria, String name,
+            String surname,String fathername,  // Перегруженный конструктор с отсутствием второго имени.
+            LocalDate birthday, LocalDate dateOfIssuing){
+    this(passportNumber, passportSeria, name, surname, fathername, null, birthday, dateOfIssuing);
+    
+    }
+    public Passport(int passportNumber, int passportSeria, String name,
+            String surname,  // Перегруженный конструктор с отсутствием отчества и второго имени.
+            LocalDate birthday, LocalDate dateOfIssuing){
+    this(passportNumber, passportSeria, name, surname, null, birthday, dateOfIssuing);
+    }
+    
+    /*  TODO (Проверка№3 ЛР№1)
+        - Добавить коментарии ко всем методам класса - это означает надо описать действие метода,
+        а не описывать его устройство, нас интересует что он может делать.
+        Например: нахождение максимального числа, получение поля index, конструктор со всеми параметрами!
+        Конструкторы и гетеры тоже надо подписывать, сразу становиться ясно что он делает!
+        - Ставь комментарии перед конструкторами и методами, тогда они легче читаются!
+    */
 
-    public int getPassportNumber() {
+    public int getPassportNumber() {   // Метод получения значений полей из класса - номер паспорта
         return passportNumber;
     }
 
-    public int getPassportSeria() {
+    public int getPassportSeria() { // Метод получения значений полей из класса - серия паспорта
         return passportSeria;
     }
 
-    public String getName() {
+    public String getName() { // Метод получения значений полей из класса - имя
         return name;
     }
 
-    public String getSurname() {
+    public String getSurname() {  // Метод получения значений полей из класса - фамилия
         return surname;
     }
 
-    public String getFathername() {
+    public String getFathername() {  // Метод получения значений полей из класса - отчесство
         return fathername;
     }
 
-    public String getSecondName() {
+    public String getSecondName() {  // Метод получения значений полей из класса - второе имя
         return secondName;
     }
 
-    public LocalDate getBirthday() {
+    public LocalDate getBirthday() {  // Метод получения значений полей из класса - день рождения
         return birthday;
     }
 
-    public LocalDate getDateOfIssuing() {
+    public LocalDate getDateOfIssuing() {  // Метод получения значений полей из класса - дата получения
         return dateOfIssuing;
     }
 
-    public Address getAddress() {
-        return address;
-    }
+   
 }

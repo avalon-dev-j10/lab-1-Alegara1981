@@ -48,7 +48,7 @@ public class Person {            // Объявлен класс.
         - Ставь комментарии перед конструкторами и методами, тогда они легче читаются!
     */
     
-    public String getAddress(){ //Метод получения из класса значения полей.
+    public String getAddress(){ // Получение адреса объекта Person
 
      
         return address.getIndex() + " " + address.getCountry()

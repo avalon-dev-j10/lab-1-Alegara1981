@@ -51,32 +51,32 @@ public class Address{           // Объявлен класс Адрес.
       this(0, country, null, city, street, home, flat);
       } 
       
-    public int getIndex() { // Обьявление методов получения значений полей из класса.
+    public int getIndex() { // Обьявление методов получения значений полей из класса - индекс
         return index;
     }
 
-    public int getFlat() {
+    public int getFlat() { // Обьявление методов получения значений полей из класса - квартира
         return flat;
     }
 
-    public String getCountry() {
+    public String getCountry() { // Обьявление методов получения значений полей из класса - страна
         return country;
     }
 
-    public String getRegion() {
+    public String getRegion() { // Обьявление методов получения значений полей из класса - область
         return region;
     }
     
 
-    public String getCity() {
+    public String getCity() { // Обьявление методов получения значений полей из класса - город
         return city;
     }
 
-    public String getStreet() {
+    public String getStreet() { // Обьявление методов получения значений полей из класса - улица
         return street;
     }
 
-    public String getHome() {
+    public String getHome() { // Обьявление методов получения значений полей из класса - дом
         return home;
     }
 }

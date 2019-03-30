@@ -4,7 +4,8 @@
 package ru.avalon.java.dev.j10.labs.commons;
 
 public class Address{           // Объявлен класс Адрес.
-    private int index;          // Объявление полей(переменных) класса - индекс
+    private int index; // Объявление полей(переменных) класса - индекс
+    private String country; // страна
     private String region;       // регион-область
     private String city;          // город
     private String street;          // улица
